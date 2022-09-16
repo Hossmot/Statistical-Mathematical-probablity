@@ -5,7 +5,7 @@ long long int N[100001][1001],a,R=0,r,n,m,F=0, L=0,lock=0, lockcount=0;
 main()
 {
 	srand(time(NULL));
-	printf("지정된 범위 내의 숫자를 중복하여 정해진 횟수만큼 뽑았을 때, 모두 짝수인 경우를 새는 프로그램입니다.\n");
+	printf("지정된 범위 내의 숫자를 중복하여 정해진 횟수만큼 뽑았을 때, 모두 짝수인 경우를 세는 프로그램입니다.\n");
 	while(R<=100000){
 		L=0 ,lock=0, lockcount=0;
 	printf("몇 번 시행할지 입력하여 주십시오(최대 100000번).\n");
