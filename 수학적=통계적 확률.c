@@ -5,22 +5,20 @@ long long int N[100001][1001],a,R=0,r,n,m,F=0, L=0,lock=0, lockcount=0;
 main()
 {
 	srand(time(NULL));
-	printf("ÁöÁ¤µÈ ¹üÀ§ ³»ÀÇ ¼ýÀÚ¸¦ Áßº¹ÇÏ¿© Á¤ÇØÁø È½¼ö¸¸Å­ »Ì¾ÒÀ» ¶§, ¸ðµÎ Â¦¼öÀÎ °æ¿ì¸¦ »õ´Â ÇÁ·Î±×·¥ÀÔ´Ï´Ù.\n");
+	printf("ì§€ì •ëœ ë²”ìœ„ ë‚´ì˜ ìˆ«ìžë¥¼ ì¤‘ë³µí•˜ì—¬ ì •í•´ì§„ íšŸìˆ˜ë§Œí¼ ë½‘ì•˜ì„ ë•Œ, ëª¨ë‘ ì§ìˆ˜ì¸ ê²½ìš°ë¥¼ ìƒˆëŠ” í”„ë¡œê·¸ëž¨ìž…ë‹ˆë‹¤.\n");
 	while(R<=100000){
 		L=0 ,lock=0, lockcount=0;
-	printf("¸î ¹ø ½ÃÇàÇÒÁö ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À(ÃÖ´ë 100000¹ø).\n");
+	printf("ëª‡ ë²ˆ ì‹œí–‰í• ì§€ ìž…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤(ìµœëŒ€ 100000ë²ˆ).\n");
 	scanf("%d", &R);
 	if(R>100000){
 		break;
 	}
-	printf("¸î ±îÁöÀÇ ÀÚ¿¬¼ö Áß¿¡ ¼ö¸¦ »ÌÀ»Áö ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.\n");
+	printf("ëª‡ ê¹Œì§€ì˜ ìžì—°ìˆ˜ ì¤‘ì— ìˆ˜ë¥¼ ë½‘ì„ì§€ ìž…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.\n");
 	scanf("%d", &m);
-	printf("¸î °³ÀÇ ¼ö¸¦ »ÌÀ»Áö ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.(ÃÖ´ë 1000)\n");
+	printf("ëª‡ ê°œì˜ ìˆ˜ë¥¼ ë½‘ì„ì§€ ìž…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.(ìµœëŒ€ 1000)\n");
 	scanf("%d", &n); 
 	for(lock=0;lock<1;lock){
-	for(r=0;r<=R;r++){       
-		
-	
+	for(r=0;r<=R;r++){      
 	for(a=1;a<=n;a++)
 	N[r][a]=rand()%m+1;
 	for(a=1;a<=n;a++){
@@ -29,24 +27,21 @@ main()
 			F++;
 		}
 	}
-		
 	if(F==n){
 		L++;
 		printf("---");
 	}
 	F=0;
 	printf("%\n");
-	
 }
 if(L>0){
 	lock++;
 }else{
 	lockcount++;
 }
-
 }
-	printf("%d¹ø\n", L);
-	printf("%d¹øÀÇ Àç½ÃÇà\n", lockcount);
+	printf("%dë²ˆ\n", L);
+	printf("%dë²ˆì˜ ìž¬ì‹œí–‰\n", lockcount);
 }
 }
 
